@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Courgette&display=swap);
+
 .nav-space{
   justify-content: space-around;
 }
@@ -6,50 +7,67 @@
   font-family: 'Courgette', cursive;
   font-size: 1.2rem;
 }
-*{
-  font-size: 1.2rem;
+
+
+.nav-item{
+  position: relative;
+  z-index: 1;
 }
 
-.mujhe::before{
-  border: solid black 1px;
-  /* background-color: red; */
+.nav-item:hover:before{
   content: "";
-  height: 100%;
-  width:10%;
-  /* margin-right: -50%; */
-  /* margin-left: 2.5%; */
-  margin: 0px auto;
-  /* display:flex; */
-  align-items: center;
-  justify-content: center;
-  position:absolute;
-  top: auto;
-  left: auto;
-}
-
-.nav-item:hover::after{
-  content: "";
-  top: auto;
-  justify-content: center;
   position: absolute;
-  border-bottom:solid black 1px;
-  width: 20%;
-  /* animation: animate forwards 1s linear; */
-  /* animation: cubic-bezier(1, 0, 0, 1); */
-  /* animation-duration: 2s; */
+  top : 0%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-bottom:solid black 2px;
+  /* border-top:solid black 2px; */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: animate forwards .6s cubic-bezier(.6,-0.28,.74,.05);
+}
+.nav-item:hover:after{
+  content: "";
+  position: absolute;
+  top : 0%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* border-bottom:solid black 2px; */
+  border-top:solid black 2px;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  animation: animate1 forwards .6s cubic-bezier(.6,-0.28,.74,.05);
 }
 
 @keyframes animate {
   0%{
     border-bottom: solid black 1px;
-    border-width: 0%;
+    width: 0%;
   }
   50%{
     border-bottom: solid black 1px;
-    border-width: 50%;
+    width: 50%;
   }
   100%{
     border-bottom: solid black 1px;
-    border-width: 100%;
+    width: 100%;
+  }
+}
+@keyframes animate1 {
+  0%{
+    border-bottom: solid black 1px;
+    width: 0%;
+  }
+  50%{
+    border-bottom: solid black 1px;
+    width: 20%;
+  }
+  100%{
+    border-bottom: solid black 1px;
+    width: 40%;
   }
 }
