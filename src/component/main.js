@@ -1,11 +1,11 @@
 import React from "react";
 import Nav from "./nav";
-import Test from "./test";
+import Home from './home'
 const Main = () => {
     return (
         <>
             <Nav />
-            {/* <Test/> */}
+            <Home/>
         </>
     )
 }
