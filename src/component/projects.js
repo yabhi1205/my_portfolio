@@ -1,8 +1,9 @@
 import React from 'react';
 import Nav from './nav';
 
-export default ()=>{
+const Projects=()=>{
     return(
         <Nav/>
     )
 }
+export default Projects

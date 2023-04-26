@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import "../App.css"
-export default () => {
+// import "../App.css"
+const Nav = (props) => {
+    useEffect(() => {
+        if (props.effect) {
+            const nav = document.querySelector(".navbar");
+            nav.classList.toggle("scroll", window.scrollY < 1);
+            window.addEventListener("scroll", function (e) {
+                nav.classList.toggle("scroll", window.scrollY < 1);
+            });
+        }
+    }, [])
+
     return (
         <>
             <div className="navbar ">
@@ -18,4 +28,4 @@ export default () => {
     )
 }
 
-//  Nav
+export default Nav

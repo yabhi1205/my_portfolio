@@ -1,5 +1,6 @@
-import React from 'react';
+// import React from 'react';
 
-export default ()=>{
+const Post=()=>{
 
 }
+export default Post

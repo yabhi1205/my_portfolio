@@ -6,11 +6,20 @@
   box-sizing: border-box;
 }
 
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
 .navbar {
   width: 100vw;
   background-color: rgba(212, 212, 212, 0.527);
   position: relative;
   padding: 1% 2% 1% 2%;
+  height: 12vh;
+  position: fixed;
+  z-index: 5;
 }
 
 .container-fluid {
@@ -21,13 +30,13 @@
 
 .container-fluid a {
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1.5rem;
   color: black;
 }
 
 .navbar-brand {
   font-family: 'Courgette', cursive;
-  font-size: 1.2em !important;
+  font-size: 1.8rem !important;
 }
 
 .navbar-nav {
